@@ -26,4 +26,5 @@ char *getenv_path(char **env)
 		i++;
 	}
 	return (NULL);
+}
 
