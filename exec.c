@@ -12,9 +12,7 @@ int exec(char *argsC[], char **argv, char **env)
 	pid_t pid;
 	int exe, status;
 
-	pid = fork();	
-	
-
+	pid = fork();
 	if (pid == -1)
 	{
 		perror("execution error");
@@ -23,9 +21,10 @@ int exec(char *argsC[], char **argv, char **env)
 	else if (pid == 0)
 	{
 		char *path = getenv_path(env);
+
 		if (path == NULL)
 		{
-			fprintf(stderr, "PATH environment variable not found\n");
+		fprintf(stderr, "PATH environment variable not found\n");
 			exit(EXIT_FAILURE);
 		}
 		exe = execve(argsC[0], argsC, env);
