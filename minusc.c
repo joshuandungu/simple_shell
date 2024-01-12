@@ -8,7 +8,7 @@
  */
 char *minusc(char *str, int length)
 {
-	if (str > 0 && str[length - 1] == '\n')
+	if (str != NULL && str[length - 1] == '\n')
 		str[length - 1] = '\0';
 	return (str);
 }

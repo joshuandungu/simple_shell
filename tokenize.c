@@ -19,6 +19,7 @@ int tokenize_input(char *user_input, char *argsC[])
 		argsC[count++] = token;
 		token = strtok(NULL, delim);
 	}
+	printf("\n");
 	argsC[count] = NULL;
 	return (count);
 }

@@ -15,6 +15,7 @@ int main(int argsC, char **argv, char **env)
 
 	while (1)
 	{
+		printf("shell$");
 		readInput(argv, env);
 	}
 
